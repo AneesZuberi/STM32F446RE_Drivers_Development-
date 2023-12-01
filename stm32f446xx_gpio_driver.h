@@ -20,9 +20,9 @@ typedef struct
 	uint8_t GPIO_PinNumber;				/*!<Possible Values from @GPIO_PIN_NUMBERS    	 				 */
 	uint8_t GPIO_PinMode;				/*!<Possible Values from @GPIO_PIN_MODES     					 */
 	uint8_t GPIO_PinSpeed;				/*!<Possible Values from @GPIO_PIN_SPEED     					 */
-	uint8_t GPIO_PinPuPdControl;		/*!<Possible Values from @GPIO_PIN_PUSH_PULL_CONFIGURATION     	 */
+	uint8_t GPIO_PinPuPdControl;			/*!<Possible Values from @GPIO_PIN_PUSH_PULL_CONFIGURATION     	 		 */
 	uint8_t GPIO_PinOPType;				/*!<Possible Values from @GPIO_PIN_OUTPUT_TYPE     	 			 */
-	uint8_t GPIO_PinAltFunMode;			/*!<Possible Values from @GPIO_PIN_ALTERNATE_FUNCTIONALITY     	 */
+	uint8_t GPIO_PinAltFunMode;			/*!<Possible Values from @GPIO_PIN_ALTERNATE_FUNCTIONALITY     	 		 */
 }GPIO_PinConfig_t;
 
 /*
@@ -31,19 +31,19 @@ typedef struct
 typedef struct
 {
 	GPIO_RegDef_t *pGPIOx;				/*!<This holds the base address o f the GPIO port to which the pin belongs     	 */
-	GPIO_PinConfig_t GPIO_PinConfig;	/*!<This holds GPIO Pin configuration settings							     	 */
+	GPIO_PinConfig_t GPIO_PinConfig;		/*!<This holds GPIO Pin configuration settings					 */
 }GPIO_Handle_t;
 
 /*
  * GPIO PIN MODES
  */
 #define GPIO_MODE_IN                 0		/*!<Input    	 				     			 */
-#define GPIO_MODE_OUT                1		/*!<General purpose output mode  				 */
-#define GPIO_MODE_ALTFN              2		/*!<Alternate function mode    	 				 */
-#define GPIO_MODE_ANALOG             3		/*!<Analog mode					 				 */
-#define GPIO_MODE_IT_FT              4		/*!<Falling Trigger Interrupt mode    	 		 */
-#define GPIO_MODE_IT_RT              5		/*!<Rising Trigger Interrupt mode     	 		 */
-#define GPIO_MODE_IT_RFT             6		/*!<Rising and Falling Trigger Interrupt mode	 */
+#define GPIO_MODE_OUT                1		/*!<General purpose output mode  					 */
+#define GPIO_MODE_ALTFN              2		/*!<Alternate function mode    	 				 	 */
+#define GPIO_MODE_ANALOG             3		/*!<Analog mode					 			 */
+#define GPIO_MODE_IT_FT              4		/*!<Falling Trigger Interrupt mode    	 		 		 */
+#define GPIO_MODE_IT_RT              5		/*!<Rising Trigger Interrupt mode     	 		 		 */
+#define GPIO_MODE_IT_RFT             6		/*!<Rising and Falling Trigger Interrupt mode	 			 */
 
 /*
  * GPIO_PIN_OUTPUT_TYPE
@@ -57,14 +57,14 @@ typedef struct
 #define GPIO_SPEED_LOW             0		/*!<Low speed    				     			 */
 #define GPIO_SPEED_MEDIUM          1		/*!<Medium speed 				     			 */
 #define GPIO_SPEED_FAST            2		/*!<Fast speed 	 				     			 */
-#define GPIO_SPEED_HIGH	  	  	   3		/*!<High speed 	 				     			 */
+#define GPIO_SPEED_HIGH	  	   3		/*!<High speed 	 				     			 */
 
 /*
  * GPIO_PIN_PUSH_PULL_CONFIGURATION
  */
 #define GPIO_NO_PUPD              0			/*!<No pull-up, pull-down		     			 */
-#define GPIO_PIN_PU               1			/*!<Pull-up    	 				     			 */
-#define GPIO_PIN_PD               2			/*!<Pull-down  	 				     			 */
+#define GPIO_PIN_PU               1			/*!<Pull-up    	 				     		 */
+#define GPIO_PIN_PD               2			/*!<Pull-down  	 				     		 */
 
 /*
  * GPIO_PIN_NUMBERS
@@ -87,8 +87,8 @@ typedef struct
 #define GPIO_PIN_NO_15                  15	/*!<Pin Number 15				     			 */
 
 /*****************************************************************************
- * 						APIs supported by this driver
- * 		For more information about the APIs check the function definitions
+ * 			APIs supported by this driver
+ * 	For more information about the APIs check the function definitions
  ****************************************************************************/
 /*
  * Peripheral Clock Setup
