@@ -15,8 +15,8 @@
  */
 typedef struct
 {
-	uint32_t I2C_SCLSPEED;			/*!<Possible Values from @I2C_CLOCK_SPEED			 		*/
-	uint8_t I2C_DeviceAddress;		/*!<Set value in the application					 		*/
+	uint32_t I2C_SCLSPEED;			/*!<Possible Values from @I2C_CLOCK_SPEED			 	*/
+	uint8_t I2C_DeviceAddress;		/*!<Set value in the application					*/
 	uint8_t I2C_ACKControl;			/*!<Possible Values from @I2C_ASKNOWLEDGE_ENABLE	 		*/
 	uint8_t I2C_FMDutyCycle;		/*!<Possible Values from @I2C_FM_MODE_DUTY_CYCLE	 		*/
 }I2C_PinConfig_t;
@@ -26,28 +26,28 @@ typedef struct
  */
 typedef struct
 {
-	I2C_RegDef_t *pI2Cx;			/*!<This holds the base address o f the I2C peripheral     	 			*/
-	I2C_PinConfig_t I2CConfig;		/*!<This holds I2C configuration settings			     	 			*/
+	I2C_RegDef_t *pI2Cx;				/*!<This holds the base address o f the I2C peripheral     	 			*/
+	I2C_PinConfig_t I2CConfig;			/*!<This holds I2C configuration settings			     	 		*/
 	uint8_t *pTxBuffer;				/*!<This holds the address of Transmission Buffer	     	 			*/
 	uint8_t *pRxBuffer;				/*!<This holds the address of Reception Buffer	     	 	 			*/
 	uint32_t TxLen;					/*!<This holds the Length of Transmission Data		     	 			*/
-	uint32_t RxLen;					/*!<This holds the Length of Reception Data			     	 			*/
+	uint32_t RxLen;					/*!<This holds the Length of Reception Data			     	 		*/
 	uint32_t RxSize;
-	uint8_t TxRxState;				/*!<This holds the Transmission/Reception state @I2C_aplication_state   */
-	uint8_t DevAddr;				/*!<This holds the address for device						 			*/
-	uint8_t Sr;						/*!<This holds the Reception state @I2C_REPEATED_START		 			*/
+	uint8_t TxRxState;				/*!<This holds the Transmission/Reception state @I2C_aplication_state   		*/
+	uint8_t DevAddr;				/*!<This holds the address for device						 	*/
+	uint8_t Sr;					/*!<This holds the Reception state @I2C_REPEATED_START		 			*/
 }I2C_Handle_t;
 
 /*
  * @I2C_CLOCK_SPEED
  */
-#define I2C_SCLSPEED_SM       100000	/*!<Standard mode	 		*/
-#define I2C_SCLSPEED_FM       400000	/*!<Fast mode			 		*/
+#define I2C_SCLSPEED_SM       100000		/*!<Standard mode	 		*/
+#define I2C_SCLSPEED_FM       400000		/*!<Fast mode			 	*/
 
 /*
  * @I2C_ASKNOWLEDGE_ENABLE
  */
-#define I2C_ACK_DI  	0				/*!<No acknowledge returned			 						*/
+#define I2C_ACK_DI  	0				/*!<No acknowledge returned			 			*/
 #define I2C_ACK_EN  	1				/*!<Acknowledge returned after a byte is received			*/
 
 /*
@@ -65,36 +65,36 @@ typedef struct
 /*
  * @I2C_aplication_state
  */
-#define I2C_READY          0			/*!<I2C ready state			 								*/
+#define I2C_READY          0			/*!<I2C ready state			 						*/
 #define I2C_BUSY_IN_TX     1			/*!<I2C busy in transmission			 					*/
-#define I2C_BUSY_IN_RX     2			/*!<I2C busy in reception			 						*/
+#define I2C_BUSY_IN_RX     2			/*!<I2C busy in reception			 					*/
 
 /*
  * Flag MACROS
  */
-#define I2C_FLAG_SB        (1<<I2C_SR1_SB)		/*!<Start bit (Master mode)	 						*/
-#define I2C_FLAG_ADDR      (1<<I2C_SR1_ADDR)	/*!<Address sent (master mode)/matched (slave mode)	*/
-#define I2C_FLAG_BTF       (1<<I2C_SR1_BTF)		/*!<Byte transfer finished	 						*/
+#define I2C_FLAG_SB        (1<<I2C_SR1_SB)		/*!<Start bit (Master mode)	 				*/
+#define I2C_FLAG_ADDR      (1<<I2C_SR1_ADDR)		/*!<Address sent (master mode)/matched (slave mode)		*/
+#define I2C_FLAG_BTF       (1<<I2C_SR1_BTF)		/*!<Byte transfer finished	 				*/
 #define I2C_FLAG_TXE       (1<<I2C_SR1_TXE)		/*!<Data register empty (transmitters) 				*/
-#define I2C_FLAG_RXNE      (1<<I2C_SR1_RXNE)	/*!<Data register not empty (receivers)				*/
+#define I2C_FLAG_RXNE      (1<<I2C_SR1_RXNE)		/*!<Data register not empty (receivers)				*/
 
 /*
  * @I2C_Events
  */
 #define I2C_EV_RX_CMPLT    0	/*!<Reception Complete Event	 				*/
 #define I2C_EV_TX_CMPLT    1	/*!<Transmission Complete Event 				*/
-#define I2C_EV_STOP        2	/*!<Stop detection (slave mode) Event			*/
-#define I2C_ERROR_BERR     3	/*!<Bus Error Event		 						*/
-#define I2C_ERROR_ARLO     4	/*!<Arbitration lost (master mode) Event		*/
+#define I2C_EV_STOP        2	/*!<Stop detection (slave mode) Event				*/
+#define I2C_ERROR_BERR     3	/*!<Bus Error Event		 				*/
+#define I2C_ERROR_ARLO     4	/*!<Arbitration lost (master mode) Event			*/
 #define I2C_ERROR_AF       5	/*!<Acknowledge Failure Error Event				*/
 #define I2C_ERROR_OVR      6	/*!<OverRun/UnderRun Error Event				*/
 #define I2C_ERROR_TIMEOUT  7	/*!<Timeout or T[low] error Event				*/
-#define I2C_EV_DATA_REQ    8	/*!<Data request Event							*/
-#define I2C_EV_DATA_RCV    9	/*!<Data reception Event						*/
+#define I2C_EV_DATA_REQ    8	/*!<Data request Event						*/
+#define I2C_EV_DATA_RCV    9	/*!<Data reception Event					*/
 
 /*****************************************************************************
- * 						APIs supported by this driver
- * 		For more information about the APIs check the function definitions
+ * 			APIs supported by this driver
+ * 	For more information about the APIs check the function definitions
  ****************************************************************************/
 /*
  * Init & De-Init
