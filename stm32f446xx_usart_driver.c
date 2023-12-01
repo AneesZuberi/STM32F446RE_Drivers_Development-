@@ -11,8 +11,8 @@
  *
  * brief		-	Enables or Disables peripheral clock for the given USART
  *
- * @param[in]	-	Base address of USART peripheral
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	Base address of USART peripheral
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -81,8 +81,8 @@ void USART_PeriCLKControl(USART_RegDef_t *pUSARTx, uint8_t EnorDi)
  *
  * brief		-	to enable or disable USART peripehral
  *
- * @param[in]	-	Base address of USART peripheral
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	Base address of USART peripheral
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -104,8 +104,8 @@ void USART_PeripheralControl(USART_RegDef_t *pUSARTx, uint8_t EnorDi)
  *
  * brief		-	To get the status of given flag
  *
- * @param[in]	-	Base address of USART peripheral
- * @param[in]	-	Flag name
+ * @param[in]		-	Base address of USART peripheral
+ * @param[in]		-	Flag name
  *
  * @return		-	Flag Status (SET or RESET)
  *
@@ -125,8 +125,8 @@ uint8_t USART_Get_FlagStatus(USART_RegDef_t *pUSARTx, uint8_t flagName)
  *
  * brief		-	To clear the status of given flag
  *
- * @param[in]	-	Base address of USART peripheral
- * @param[in]	-	Flag name
+ * @param[in]		-	Base address of USART peripheral
+ * @param[in]		-	Flag name
  *
  * @return		-	none
  *
@@ -142,7 +142,7 @@ void USART_Clear_FlagStatus(USART_RegDef_t *pUSARTx, uint8_t flagName)
  *
  * brief		-	Initialize USART peripheral
  *
- * @param[in]	-	USART handle
+ * @param[in]		-	USART handle
  *
  * @return		-	none
  *
@@ -249,8 +249,8 @@ void USART_Init(USART_Handle_t *pUSARTHandle)
  *
  * brief		-	Initialize USART peripheral
  *
- * @param[in]	-	Base address of USART peripheral
- * @param[in]	-	Baud rate
+ * @param[in]		-	Base address of USART peripheral
+ * @param[in]		-	Baud rate
  *
  * @return		-	none
  *
@@ -324,7 +324,7 @@ void USART_SetBaudRate(USART_RegDef_t *pUSARTx, uint32_t BaudRate)
  *
  * brief		-	De-Initialize USART peripheral
  *
- * @param[in]	-	Base address of USART peripheral
+ * @param[in]		-	Base address of USART peripheral
  *
  * @return		-	none
  *
@@ -358,9 +358,9 @@ void USART_DeInit(USART_RegDef_t *pUSARTx)
  *
  * brief		-	Send data through USART in polling mode
  *
- * @param[in]	-	USART handle
- * @param[in]	-	Address of Transmission Buffer
- * @param[in]	-	Length of data to transmit
+ * @param[in]		-	USART handle
+ * @param[in]		-	Address of Transmission Buffer
+ * @param[in]		-	Length of data to transmit
  *
  * @return		-	none
  *
@@ -417,9 +417,9 @@ void USART_SendData(USART_Handle_t *pUSARTHandle, uint8_t *pTxBuffer, uint32_t L
  *
  * brief		-	Send data through USART in polling mode
  *
- * @param[in]	-	USART handle
- * @param[in]	-	Address of Reception Buffer
- * @param[in]	-	Length of data to receive
+ * @param[in]		-	USART handle
+ * @param[in]		-	Address of Reception Buffer
+ * @param[in]		-	Length of data to receive
  *
  * @return		-	none
  *
@@ -493,9 +493,9 @@ void USART_ReceiveData(USART_Handle_t *pUSARTHandle, uint8_t *pRxBuffer, uint32_
  *
  * brief		-	Send data through USART in interrupt mode
  *
- * @param[in]	-	USART handle
- * @param[in]	-	Address of Transmission Buffer
- * @param[in]	-	Length of data to transmit
+ * @param[in]		-	USART handle
+ * @param[in]		-	Address of Transmission Buffer
+ * @param[in]		-	Length of data to transmit
  *
  * @return		-	USART peripheral state
  *
@@ -525,9 +525,9 @@ uint8_t USART_SendDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pTxBuffer, uint32
  *
  * brief		-	Send data through USART in interrupt mode
  *
- * @param[in]	-	USART handle
- * @param[in]	-	Address of Reception Buffer
- * @param[in]	-	Length of data to receive
+ * @param[in]		-	USART handle
+ * @param[in]		-	Address of Reception Buffer
+ * @param[in]		-	Length of data to receive
  *
  * @return		-	USART peripheral state
  *
@@ -554,8 +554,8 @@ uint8_t USART_ReceiveDataIT(USART_Handle_t *pUSARTHandle,uint8_t *pRxBuffer, uin
  *
  * brief		-	IRQ configuration for USART peripheral
  *
- * @param[in]	-	IRQ number
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	IRQ number
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -601,8 +601,8 @@ void USART_IRQITConfig(uint8_t IRQNumber, uint8_t EnorDi)
  *
  * brief		-	IRQ priority configuration for USART peripheral
  *
- * @param[in]	-	IRQ number
- * @param[in]	-	IRQ priority value
+ * @param[in]		-	IRQ number
+ * @param[in]		-	IRQ priority value
  *
  * @return		-	none
  *
@@ -622,7 +622,7 @@ void USART_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority)
  *
  * brief		-	IRQ handling for USART peripheral
  *
- * @param[in]	-	USART Handle
+ * @param[in]		-	USART Handle
  *
  * @return		-	none
  *
