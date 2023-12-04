@@ -112,8 +112,8 @@ void I2C_SlaveEnorDiCallBackEvent(I2C_RegDef_t *pI2C, uint8_t EnorDi)
  *
  * brief		-	to enable or disable I2C peripehral
  *
- * @param[in]	-	Base address of I2C peripheral
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	Base address of I2C peripheral
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -135,8 +135,8 @@ void I2C_PeripheralControl(I2C_RegDef_t *pI2Cx, uint8_t EnorDi)
  *
  * brief		-	Enables or Disables peripheral clock for the given I2C
  *
- * @param[in]	-	Base address of I2C peripheral
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	Base address of I2C peripheral
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -181,7 +181,7 @@ void I2C_PeriCLKControl(I2C_RegDef_t *pI2Cx, uint8_t EnorDi)
  *
  * brief		-	De-Initialize I2C peripheral
  *
- * @param[in]	-	Base address of I2C peripheral
+ * @param[in]		-	Base address of I2C peripheral
  *
  * @return		-	none
  *
@@ -206,7 +206,7 @@ void I2C_DeInit(I2C_RegDef_t *pI2Cx)
  *
  * brief		-	Initialize I2C peripheral
  *
- * @param[in]	-	I2C handle
+ * @param[in]		-	I2C handle
  *
  * @return		-	none
  *
@@ -272,11 +272,11 @@ void I2C_Init(I2C_Handle_t *pI2CHandle)
  *
  * brief		-	Master send data to slave
  *
- * @param[in]	-	I2C handle
- * @param[in]	-	Address of Transmission Buffer
- * @param[in]	-	Length of data to transmit
- * @param[in]	-	Slave address
- * @param[in]	-	Repeated start macro value
+ * @param[in]		-	I2C handle
+ * @param[in]		-	Address of Transmission Buffer
+ * @param[in]		-	Length of data to transmit
+ * @param[in]		-	Slave address
+ * @param[in]		-	Repeated start macro value
  *
  * @return		-	none
  *
@@ -323,11 +323,11 @@ void I2C_MasterSendData(I2C_Handle_t *pI2CHandle, uint8_t *pTxBuffer, uint32_t L
  *
  * brief		-	Master receive data from slave
  *
- * @param[in]	-	I2C handle
- * @param[in]	-	Address of Reception Buffer
- * @param[in]	-	Length of data to receive
- * @param[in]	-	Slave address
- * @param[in]	-	Repeated start macro value
+ * @param[in]		-	I2C handle
+ * @param[in]		-	Address of Reception Buffer
+ * @param[in]		-	Length of data to receive
+ * @param[in]		-	Slave address
+ * @param[in]		-	Repeated start macro value
  *
  * @return		-	none
  *
@@ -407,11 +407,11 @@ void I2C_MasterReceiveData(I2C_Handle_t *pI2CHandle, uint8_t *pRxBuffer, uint32_
  *
  * brief		-	Master send data to slave in interrupt mode
  *
- * @param[in]	-	I2C handle
- * @param[in]	-	Address of Transmission Buffer
- * @param[in]	-	Length of data to transmit
- * @param[in]	-	Slave address
- * @param[in]	-	Repeated start macro value
+ * @param[in]		-	I2C handle
+ * @param[in]		-	Address of Transmission Buffer
+ * @param[in]		-	Length of data to transmit
+ * @param[in]		-	Slave address
+ * @param[in]		-	Repeated start macro value
  *
  * @return		-	I2C peripheral state
  *
@@ -449,11 +449,11 @@ uint8_t I2C_MasterSendDataIT(I2C_Handle_t *pI2CHandle, uint8_t *pTxBuffer, uint3
  *
  * brief		-	Master receive data from slave in interrupt mode
  *
- * @param[in]	-	I2C handle
- * @param[in]	-	Address of Reception Buffer
- * @param[in]	-	Length of data to receive
- * @param[in]	-	Slave address
- * @param[in]	-	Repeated start macro value
+ * @param[in]		-	I2C handle
+ * @param[in]		-	Address of Reception Buffer
+ * @param[in]		-	Length of data to receive
+ * @param[in]		-	Slave address
+ * @param[in]		-	Repeated start macro value
  *
  * @return		-	I2C peripheral state
  *
@@ -492,8 +492,8 @@ uint8_t I2C_MasterReceiveDataIT(I2C_Handle_t *pI2CHandle, uint8_t *pRxBuffer, ui
  *
  * brief		-	IRQ configuration for I2C peripheral
  *
- * @param[in]	-	IRQ number
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	IRQ number
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -539,8 +539,8 @@ void I2C_IRQITConfig(uint8_t IRQNumber, uint8_t EnorDi)
  *
  * brief		-	IRQ priority configuration for I2C peripheral
  *
- * @param[in]	-	IRQ number
- * @param[in]	-	IRQ priority value
+ * @param[in]		-	IRQ number
+ * @param[in]		-	IRQ priority value
  *
  * @return		-	none
  *
@@ -560,8 +560,8 @@ void I2C_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority)
  *
  * brief		-	Slave send data to master
  *
- * @param[in]	-	Base address of I2C peripheral
- * @param[in]	-	Data to transmit
+ * @param[in]		-	Base address of I2C peripheral
+ * @param[in]		-	Data to transmit
  *
  * @return		-	none
  *
@@ -577,7 +577,7 @@ void I2C_SlaveSendData(I2C_RegDef_t *pI2C, uint8_t data)
  *
  * brief		-	Slave receive data from master
  *
- * @param[in]	-	Base address of I2C peripheral
+ * @param[in]		-	Base address of I2C peripheral
  *
  * @return		-	Data received
  *
@@ -593,7 +593,7 @@ uint8_t I2C_SlaveReceiveData(I2C_RegDef_t *pI2C)
  *
  * brief		-	IRQ Event handling for I2C peripheral
  *
- * @param[in]	-	I2C Handle
+ * @param[in]		-	I2C Handle
  *
  * @return		-	none
  *
@@ -754,7 +754,7 @@ void I2C_EV_IRQHandling(I2C_Handle_t *pI2CHandle)
  *
  * brief		-	IRQ Error handling for I2C peripheral
  *
- * @param[in]	-	I2C Handle
+ * @param[in]		-	I2C Handle
  *
  * @return		-	none
  *
@@ -830,8 +830,8 @@ void I2C_ER_IRQHandling(I2C_Handle_t *pI2CHandle)
  *
  * brief		-	Acknowledge management
  *
- * @param[in]	-	Base address of I2C peripheral
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	Base address of I2C peripheral
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
