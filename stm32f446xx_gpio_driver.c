@@ -12,8 +12,8 @@
  *
  * brief		-	Enables or Disables peripheral clock for the given GPIO port
  *
- * @param[in]	-	Base address of GPIO peripheral
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	Base address of GPIO peripheral
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -98,7 +98,7 @@ void GPIO_PeriCLKControl(GPIO_RegDef_t *pGPIOx, uint8_t EnorDi)
  *
  * brief		-	Initialize pin configuration
  *
- * @param[in]	-	GPIO handle
+ * @param[in]		-	GPIO handle
  *
  * @return		-	none
  *
@@ -172,7 +172,7 @@ void GPIO_Init(GPIO_Handle_t *pGPIOHandle)
  *
  * brief		-	De-Initialize pin configuration
  *
- * @param[in]	-	Base address of GPIO peripheral
+ * @param[in]		-	Base address of GPIO peripheral
  *
  * @return		-	none
  *
@@ -219,8 +219,8 @@ void GPIO_DeInit(GPIO_RegDef_t *pGPIOx)
  *
  * brief		-	Read data from GPIO pin
  *
- * @param[in]	-	Base address of GPIO peripheral
- * @param[in]	-	Pin Number
+ * @param[in]		-	Base address of GPIO peripheral
+ * @param[in]		-	Pin Number
  *
  * @return		-	input value from GPIO pin (0 or 1)
  *
@@ -238,7 +238,7 @@ uint8_t GPIO_ReadFromIPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber)
  *
  * brief		-	Read data from GPIO port
  *
- * @param[in]	-	Base address of GPIO peripheral
+ * @param[in]		-	Base address of GPIO peripheral
  *
  * @return		-	input value from GPIO port (0 to 15)
  *
@@ -256,9 +256,9 @@ uint16_t GPIO_ReadFromIPort(GPIO_RegDef_t *pGPIOx)
  *
  * brief		-	write data on GPIO pin
  *
- * @param[in]	-	Base address of GPIO peripheral
- * @param[in]	-	GPIO pin number
- * @param[in]	-	value to write(0 or 1)
+ * @param[in]		-	Base address of GPIO peripheral
+ * @param[in]		-	GPIO pin number
+ * @param[in]		-	value to write(0 or 1)
  *
  * @return		-	none
  *
@@ -282,8 +282,8 @@ void GPIO_WriteToOPin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber, uint8_t Value)
  *
  * brief		-	write data on GPIO port
  *
- * @param[in]	-	Base address of GPIO peripheral
- * @param[in]	-	value to write(0 to 15)
+ * @param[in]		-	Base address of GPIO peripheral
+ * @param[in]		-	value to write(0 to 15)
  *
  * @return		-	none
  *
@@ -299,8 +299,8 @@ void GPIO_WriteToOPort(GPIO_RegDef_t *pGPIOx, uint16_t Value)
  *
  * brief		-	toggles the value on GPIO pin
  *
- * @param[in]	-	Base address of GPIO peripheral
- * @param[in]	-	GPIO pin number
+ * @param[in]		-	Base address of GPIO peripheral
+ * @param[in]		-	GPIO pin number
  *
  * @return		-	none
  *
@@ -317,8 +317,8 @@ void GPIO_TogglePin(GPIO_RegDef_t *pGPIOx, uint8_t PinNumber)
  *
  * brief		-	IRQ configuration for GPIO peripheral
  *
- * @param[in]	-	IRQ number
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	IRQ number
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -364,8 +364,8 @@ void GPIO_IRQITConfig(uint8_t IRQNumber, uint8_t EnorDi)
  *
  * brief		-	IRQ priority configuration for GPIO peripheral
  *
- * @param[in]	-	IRQ number
- * @param[in]	-	IRQ priority value
+ * @param[in]		-	IRQ number
+ * @param[in]		-	IRQ priority value
  *
  * @return		-	none
  *
@@ -385,7 +385,7 @@ void GPIO_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority)
  *
  * brief		-	IRQ handling for GPIO peripheral
  *
- * @param[in]	-	GPIO pin number
+ * @param[in]		-	GPIO pin number
  *
  * @return		-	none
  *
