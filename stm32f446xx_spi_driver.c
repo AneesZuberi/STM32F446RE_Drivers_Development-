@@ -15,8 +15,8 @@ static void spi_ovr_err_it_handle(SPI_Handle_t *pSPIHandle);
  *
  * brief		-	Enables or Disables peripheral clock for the given SPI
  *
- * @param[in]	-	Base address of SPI peripheral
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	Base address of SPI peripheral
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -61,7 +61,7 @@ void SPI_PeriCLKControl(SPI_RegDef_t *pSPIx, uint8_t EnorDi)
  *
  * brief		-	Initialize SPI peripheral
  *
- * @param[in]	-	SPI handle
+ * @param[in]		-	SPI handle
  *
  * @return		-	none
  *
@@ -114,7 +114,7 @@ void SPI_Init(SPI_Handle_t *pSPIHandle)
  *
  * brief		-	De-Initialize SPI peripheral
  *
- * @param[in]	-	Base address of SPI peripheral
+ * @param[in]		-	Base address of SPI peripheral
  *
  * @return		-	none
  *
@@ -139,8 +139,8 @@ void SPI_DeInit(SPI_RegDef_t *pSPIx)
  *
  * brief		-	To get the status of given flag
  *
- * @param[in]	-	Base address of SPI peripheral
- * @param[in]	-	Flag name
+ * @param[in]		-	Base address of SPI peripheral
+ * @param[in]		-	Flag name
  *
  * @return		-	Flag Status (SET or RESET)
  *
@@ -160,9 +160,9 @@ uint8_t Get_FlagStatus(SPI_RegDef_t *pSPIx, uint8_t flagName)
  *
  * brief		-	Send data through SPI in polling mode
  *
- * @param[in]	-	Base address of SPI peripheral
- * @param[in]	-	Address of Transmission Buffer
- * @param[in]	-	Length of data to transmit
+ * @param[in]		-	Base address of SPI peripheral
+ * @param[in]		-	Address of Transmission Buffer
+ * @param[in]		-	Length of data to transmit
  *
  * @return		-	none
  *
@@ -195,9 +195,9 @@ void SPI_Send(SPI_RegDef_t *pSPIx, uint8_t *pTxBuffer, uint32_t Len)
  *
  * brief		-	Receive data through SPI in polling mode
  *
- * @param[in]	-	Base address of SPI peripheral
- * @param[in]	-	Address of Reception Buffer
- * @param[in]	-	Length of data to receive
+ * @param[in]		-	Base address of SPI peripheral
+ * @param[in]		-	Address of Reception Buffer
+ * @param[in]		-	Length of data to receive
  *
  * @return		-	none
  *
@@ -230,8 +230,8 @@ void SPI_Receive(SPI_RegDef_t *pSPIx, uint8_t *pRxBuffer, uint32_t Len )
  *
  * brief		-	to enable or disable SPI peripehral
  *
- * @param[in]	-	Base address of SPI peripheral
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	Base address of SPI peripheral
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -253,8 +253,8 @@ void SPI_PeripheralControl(SPI_RegDef_t *pSPIx, uint8_t EnorDi)
  *
  * brief		-	to enable or disable SPI software slave management
  *
- * @param[in]	-	Base address of SPI peripheral
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	Base address of SPI peripheral
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -276,8 +276,8 @@ void SPI_SSIConfig(SPI_RegDef_t *pSPIx, uint8_t EnorDi)
  *
  * brief		-	to enable or disable SPI hardware slave management
  *
- * @param[in]	-	Base address of SPI peripheral
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	Base address of SPI peripheral
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -299,8 +299,8 @@ void SPI_SSOEConfig(SPI_RegDef_t *pSPIx, uint8_t EnorDi)
  *
  * brief		-	IRQ configuration for SPI peripheral
  *
- * @param[in]	-	IRQ number
- * @param[in]	-	ENABLE or DISABLE macros
+ * @param[in]		-	IRQ number
+ * @param[in]		-	ENABLE or DISABLE macros
  *
  * @return		-	none
  *
@@ -346,8 +346,8 @@ void SPI_IRQITConfig(uint8_t IRQNumber, uint8_t EnorDi)
  *
  * brief		-	IRQ priority configuration for SPI peripheral
  *
- * @param[in]	-	IRQ number
- * @param[in]	-	IRQ priority value
+ * @param[in]		-	IRQ number
+ * @param[in]		-	IRQ priority value
  *
  * @return		-	none
  *
@@ -367,9 +367,9 @@ void SPI_IRQPriorityConfig(uint8_t IRQNumber, uint32_t IRQPriority)
  *
  * brief		-	Send data through SPI in interrupt mode
  *
- * @param[in]	-	SPI Handle
- * @param[in]	-	Address of Transmission Buffer
- * @param[in]	-	Length of data to transmit
+ * @param[in]		-	SPI Handle
+ * @param[in]		-	Address of Transmission Buffer
+ * @param[in]		-	Length of data to transmit
  *
  * @return		-	SPI peripheral state
  *
@@ -396,9 +396,9 @@ uint8_t SPI_SendIT(SPI_Handle_t *pSPIHandle, uint8_t *pTxBuffer, uint32_t Len)
  *
  * brief		-	Receive data through SPI in interrupt mode
  *
- * @param[in]	-	SPI Handle
- * @param[in]	-	Address of Reception Buffer
- * @param[in]	-	Length of data to receive
+ * @param[in]		-	SPI Handle
+ * @param[in]		-	Address of Reception Buffer
+ * @param[in]		-	Length of data to receive
  *
  * @return		-	SPI peripheral state
  *
@@ -425,7 +425,7 @@ uint8_t SPI_ReceiveIT(SPI_Handle_t *pSPIHandle, uint8_t *pRxBuffer, uint32_t Len
  *
  * brief		-	IRQ handling for SPI peripheral
  *
- * @param[in]	-	SPI Handle
+ * @param[in]		-	SPI Handle
  *
  * @return		-	none
  *
@@ -468,7 +468,7 @@ void SPI_IRQHandling(SPI_Handle_t *pSPIHandle)
  *
  * brief		-	Interrupt handling for transmission event
  *
- * @param[in]	-	SPI Handle
+ * @param[in]		-	SPI Handle
  *
  * @return		-	none
  *
@@ -504,7 +504,7 @@ static void spi_txe_it_handle(SPI_Handle_t *pSPIHandle)
  *
  * brief		-	Interrupt handling for reception event
  *
- * @param[in]	-	SPI Handle
+ * @param[in]		-	SPI Handle
  *
  * @return		-	none
  *
@@ -540,7 +540,7 @@ static void spi_rxe_it_handle(SPI_Handle_t *pSPIHandle)
  *
  * brief		-	Interrupt handling for over run error event
  *
- * @param[in]	-	SPI Handle
+ * @param[in]		-	SPI Handle
  *
  * @return		-	none
  *
@@ -564,7 +564,7 @@ static void spi_ovr_err_it_handle(SPI_Handle_t *pSPIHandle)
  *
  * brief		-	Clear over run flag
  *
- * @param[in]	-	Base address of SPI peripheral
+ * @param[in]		-	Base address of SPI peripheral
  *
  * @return		-	none
  *
@@ -583,7 +583,7 @@ void SPI_ClearOVRFlag(SPI_RegDef_t *pSPIx)
  *
  * brief		-	Reset all transmission configuration
  *
- * @param[in]	-	SPI Handle
+ * @param[in]		-	SPI Handle
  *
  * @return		-	none
  *
@@ -602,7 +602,7 @@ void SPI_CloseTransmission(SPI_Handle_t *pSPIHandle)
  *
  * brief		-	Reset all reception configuration
  *
- * @param[in]	-	SPI Handle
+ * @param[in]		-	SPI Handle
  *
  * @return		-	none
  *
@@ -621,8 +621,8 @@ void SPI_CloseReception(SPI_Handle_t *pSPIHandle)
  *
  * brief		-	Event call back function for interrupt mode
  *
- * @param[in]	-	SPI Handle
- * @param[in]	-	SPI event
+ * @param[in]		-	SPI Handle
+ * @param[in]		-	SPI event
  *
  * @return		-	none
  *
